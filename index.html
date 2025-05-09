@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kene David Nwosu – AI Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /*––––  Colour palette –––––*/
+    :root {
+      --dark-teal:#004452;   /* background */
+      --light-teal:#4CA5AF;  /* card background */
+      --pale-yellow:#F8E9A1; /* accent */
+      --white:#ffffff;       /* text on dark */
+      --text-dark:#0a0a0a;   /* text on light */
+    }
+    /*––––  Reset & base ––––*/
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--dark-teal);
+      color:var(--white);
+      display:flex;
+      flex-direction:column;
+      min-height:100vh;
+    }
+    a{color:var(--pale-yellow);text-decoration:none;font-weight:600;}
+    a:hover{text-decoration:underline;}
+
+    /*––––  Layout ––––*/
+    header{
+      text-align:center;
+      padding:4rem 1rem 3rem;
+    }
+    header h1{font-size:2.5rem;font-weight:700;margin-bottom:0.25rem;}
+    header p.subtitle{font-size:1.25rem;color:var(--pale-yellow);}
+
+    nav{margin-top:2rem;}
+    nav a{margin:0 0.75rem;}
+
+    main section{
+      max-width:700px;
+      margin:0 auto;
+      padding:3rem 1rem;
+    }
+    main h2{
+      font-size:1.75rem;
+      margin-bottom:1.5rem;
+      position:relative;
+    }
+    main h2::after{
+      content:"";
+      display:block;
+      width:60px;height:3px;
+      background:var(--pale-yellow);
+      margin-top:0.5rem;
+    }
+    .card{
+      background:var(--light-teal);
+      color:var(--text-dark);
+      border-radius:12px;
+      padding:1.75rem;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+    footer{
+      margin-top:auto;
+      padding:2rem 1rem;
+      text-align:center;
+      font-size:0.875rem;
+      color:var(--pale-yellow);
+    }
+    @media(min-width:768px){
+      header h1{font-size:3rem;}
+      header p.subtitle{font-size:1.5rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kene David Nwosu</h1>
+    <p class="subtitle">R Developer • Data Analyst • Educator</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#course">Course</a>
+      <a href="#workshops">Workshops</a>
+    </nav>
+  </header>
+
+  <main>
+    <!--––––  About  ––––-->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="card">
+        <p>Hello! I'm Kene, a PhD candidate in epidemiology at the University of Geneva and co‑founder of <a href="https://thegraphcourses.org" target="_blank" rel="noopener">The GRAPH Courses</a>. I build data‑driven solutions and teach data science, specializing in R, Python and JavaScript.</p>
+        <p>My research focuses on infectious‑disease modelling and improving health outcomes for vulnerable populations. I love leveraging Generative AI to automate tasks, visualise insights, and communicate science more effectively.</p>
+      </div>
+    </section>
+
+    <!--––––  Course  ––––-->
+    <section id="course">
+      <h2>Generative AI for Work & Research Productivity</h2>
+      <div class="card">
+        <p>This eight‑week live online certification equips researchers and professionals with no‑code AI tools to automate workflows, analyse data, and create high‑impact content.</p>
+        <ul style="list-style:none;padding-left:0;line-height:1.8;">
+          <li><strong>Start date:</strong> 9 May 2025</li>
+          <li><strong>Format:</strong> Live workshops – Fridays 3 pm GMT or Sundays 5 pm GMT</li>
+          <li><strong>Key modules:</strong> Content Generation · Automated Data Analysis · Research & Text Analysis · Custom GPTs · AI Workflows · Communication & Outreach · Capstone Project</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--––––  Workshops  ––––-->
+    <section id="workshops">
+      <h2>Workshop Submissions</h2>
+      <div class="card">
+        <p>My project links will appear here once each workshop is complete—stay tuned!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Kene David Nwosu · All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
